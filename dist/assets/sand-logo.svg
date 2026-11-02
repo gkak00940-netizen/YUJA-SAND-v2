@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 112" role="img" aria-labelledby="title desc">
+  <title id="title">SAND 고흥 유자 샌드</title>
+  <desc id="desc">둥근 현미 퍼프 샌드와 노란 유자크림을 표현한 SAND 로고</desc>
+  <g stroke="#C58A3E" stroke-width="2.2" stroke-linejoin="round">
+    <!-- 겹쳐진 현미 퍼프 샌드 -->
+    <circle cx="34" cy="63" r="22" fill="#F2DDB4"/>
+    <circle cx="69" cy="60" r="20" fill="#F8E8C8"/>
+    <g fill="#EFCF91" stroke="none">
+      <ellipse cx="24" cy="51" rx="3.2" ry="1.8" transform="rotate(-28 24 51)"/><ellipse cx="37" cy="45" rx="3" ry="1.7" transform="rotate(26 37 45)"/>
+      <ellipse cx="31" cy="63" rx="3.2" ry="1.8" transform="rotate(20 31 63)"/><ellipse cx="43" cy="72" rx="3" ry="1.8" transform="rotate(-30 43 72)"/>
+      <ellipse cx="61" cy="48" rx="3" ry="1.7" transform="rotate(-20 61 48)"/><ellipse cx="76" cy="53" rx="3" ry="1.8" transform="rotate(30 76 53)"/>
+      <ellipse cx="62" cy="67" rx="3.2" ry="1.8" transform="rotate(25 62 67)"/><ellipse cx="77" cy="69" rx="3" ry="1.7" transform="rotate(-25 77 69)"/>
+    </g>
+    <!-- 가운데 샌드의 바삭한 윗면, 유자크림, 아랫면 -->
+    <path d="M31 39c0-14 10-25 24-25s24 11 24 25v5c-14-5-34-5-48 0z" fill="#F7E8C8"/>
+    <path d="M31 44c15-5 33-5 48 0v8c-14-5-34-5-48 0z" fill="#F1C944"/>
+    <path d="M31 52c14-5 34-5 48 0v5c0 14-10 24-24 24S31 71 31 57z" fill="#F4E1BA"/>
+    <g fill="#E8C887" stroke="none">
+      <ellipse cx="43" cy="31" rx="3" ry="1.6" transform="rotate(-25 43 31)"/><ellipse cx="57" cy="24" rx="3.2" ry="1.7" transform="rotate(20 57 24)"/>
+      <ellipse cx="70" cy="32" rx="3" ry="1.7" transform="rotate(-25 70 32)"/><ellipse cx="38" cy="39" rx="2.8" ry="1.6" transform="rotate(25 38 39)"/>
+      <ellipse cx="62" cy="38" rx="2.8" ry="1.6" transform="rotate(-18 62 38)"/><ellipse cx="46" cy="68" rx="2.8" ry="1.6" transform="rotate(20 46 68)"/>
+      <ellipse cx="64" cy="72" rx="3" ry="1.7" transform="rotate(-25 64 72)"/><ellipse cx="54" cy="60" rx="2.8" ry="1.5" transform="rotate(20 54 60)"/>
+    </g>
+    <path d="M45 18c-5-8-12-8-16-6 2 7 7 11 16 12M58 17c2-9 10-12 15-10-2 8-7 12-15 14" fill="#648151" stroke="#496B4A"/>
+  </g>
+  <text x="116" y="67" fill="#294538" font-family="Arial, 'Malgun Gothic', sans-serif" font-size="47" font-weight="800" letter-spacing="3">SAND</text>
+  <circle cx="270" cy="62" r="4.5" fill="#E5A928"/>
+  <text x="119" y="91" fill="#496B4A" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="14" font-weight="600" letter-spacing="3">고흥 유자 샌드</text>
+</svg>
