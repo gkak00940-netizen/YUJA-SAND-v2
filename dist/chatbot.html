@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="유자샌드 상품, 주문, 배송, 교환과 환불에 관한 자동 안내입니다.">
   <title>유자샌드 상담봇</title>
-  <link rel="stylesheet" href="chatbot.css">
+  <link rel="stylesheet" href="chatbot.css?v=home-logo-20261103">
   <script src="chatbot.js" defer></script>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html" aria-label="유자샌드 홈으로">
-      <span class="citrus" aria-hidden="true"></span><span>유자샌드</span>
+      <img class="brand-logo" src="assets/sand-logo-goheung-yuja.svg" alt=""><span>유자샌드</span>
     </a>
     <a class="home" href="index.html">홈으로</a>
   </header>
@@ -22,7 +22,7 @@
       <p>아래 질문을 누르거나, 궁금한 내용을 적어 주세요.</p>
     </section>
     <section class="chat" aria-label="유자샌드 상담">
-      <div class="chat-heading"><span class="avatar" aria-hidden="true">유</span><div><h2>유자샌드 상담봇</h2><p>쉽고 짧게 안내해 드려요</p></div><button class="reset" id="reset" type="button">새 대화</button></div>
+      <div class="chat-heading"><img class="avatar" src="assets/sand-logo-goheung-yuja.svg" alt="" aria-hidden="true"><div><h2>유자샌드 상담봇</h2><p>쉽고 짧게 안내해 드려요</p></div><button class="reset" id="reset" type="button">새 대화</button></div>
       <div id="messages" class="messages" role="log" aria-label="대화 내용" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
       <div class="quick-questions" aria-label="자주 묻는 질문">
         <button type="button" data-question="상품 안내">상품 안내</button>
