@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 120" role="img" aria-labelledby="title desc">
-<title id="title">GOHEUNG YUJA</title><desc id="desc">고흥 유자를 나타내는 둥근 유자 단면과 잎</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="55 -6 110 104" role="img" aria-labelledby="title desc">
+<title id="title">고흥 유자 로고</title><desc id="desc">고흥 유자를 나타내는 둥근 유자 단면과 잎</desc>
 <circle cx="104" cy="48" r="39" fill="#FFF8EA" stroke="#294538" stroke-width="2"/>
 <circle cx="104" cy="48" r="31" fill="#F4BD25" stroke="#E5A928" stroke-width="2"/>
 <circle cx="104" cy="48" r="25" fill="none" stroke="#FFF8EA" stroke-width="2"/>
@@ -7,5 +7,4 @@
 <path d="M104 24v48M80 48h48M87 31l34 34M121 31 87 65"/>
 </g>
 <path d="M126 13c9-12 21-12 27-8-4 11-14 17-28 16" fill="#294538"/>
-<text x="105" y="111" fill="#294538" font-family="Arial,sans-serif" font-size="12" font-weight="500" letter-spacing="6" text-anchor="middle">GOHEUNG YUJA</text>
 </svg>

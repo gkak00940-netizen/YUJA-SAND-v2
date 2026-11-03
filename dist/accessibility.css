@@ -1,0 +1,143 @@
+body { padding-inline-end: 120px; }
+#site-content {
+  container-type: inline-size;
+  flex: 1;
+  min-width: 0;
+  min-height: calc(100vh / var(--page-scale, 1));
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: anywhere;
+}
+#site-content > footer {
+  padding-bottom: calc(32px + 88px / var(--page-scale, 1));
+}
+#site-content dialog {
+  max-width: min(560px, calc((100vw - 32px) / var(--page-scale, 1)));
+  max-height: calc(90vh / var(--page-scale, 1));
+}
+#site-content #photo-dialog {
+  width: calc(96vw / var(--page-scale, 1));
+  max-width: min(1100px, calc(96vw / var(--page-scale, 1)));
+  padding: 12px;
+}
+#site-content #photo-dialog img { max-height: calc(80vh / var(--page-scale, 1)); }
+.quick-actions {
+  position: fixed;
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 88px;
+  height: auto;
+  padding: 0;
+}
+.quick-action {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 88px;
+  min-height: 88px;
+  padding: 10px 4px;
+  border: 2px solid #496b4a;
+  border-radius: 50%;
+  background: #fffdf7;
+  color: #365637;
+  box-shadow: 0 4px 14px #283e2b0d;
+  font: 700 16px/1.35 "맑은 고딕", "Apple SD Gothic Neo", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+.quick-action svg { width: 29px; height: 29px; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.quick-size-mark { display: flex; align-items: baseline; justify-content: center; height: 29px; font-size: 27px; line-height: 1; }
+.quick-size-mark > span { font-size: 19px; }
+.quick-action:hover, .quick-action[aria-expanded="true"] { background: #e9efdf; }
+.quick-action:focus-visible { outline: 3px solid #9b6b00; outline-offset: 4px; }
+.quick-actions [hidden] { display: none !important; }
+.page-size-controls {
+  position: absolute;
+  right: calc(100% + 14px);
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  max-width: calc(100vw - 120px);
+  padding: 5px;
+  border: 1px solid #d7ddce;
+  border-radius: 999px;
+  background: #fffaf0;
+  color: #283e2b;
+  box-shadow: 0 4px 18px #283e2b14;
+  font: 18px/1.4 "맑은 고딕", "Apple SD Gothic Neo", sans-serif;
+}
+.page-size-controls output { font: 600 16px/1.4 "맑은 고딕", sans-serif; font-variant-numeric: tabular-nums; }
+.page-size-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 52px;
+  min-height: 48px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #283e2b;
+  font: 700 16px/1.4 "맑은 고딕", "Apple SD Gothic Neo", sans-serif;
+  cursor: pointer;
+}
+.page-size-controls [data-size="reset"] { min-width: 84px; border-radius: 0; border-inline: 1px solid #e1e4d9; }
+.page-size-controls [data-size="up"] { background: #e9efdf; }
+.page-size-glyph { display: inline-flex; align-items: baseline; gap: 2px; font-size: 18px; }
+.page-size-glyph > span { font-size: 15px; }
+.page-size-controls [data-size="up"] .page-size-glyph { font-size: 23px; }
+.page-size-reset { font-size: 17px; color: #53634b; }
+.page-size-controls button:hover { background: #e3ead8; }
+.page-size-controls [aria-disabled="true"] { background: transparent; color: #737a69; cursor: default; }
+.page-size-controls button:focus-visible { outline: 3px solid #9b6b00; outline-offset: 3px; }
+@media (max-width: 600px) {
+  body { padding-inline-end: 88px; }
+  .quick-actions { right: calc(8px + env(safe-area-inset-right, 0px)); width: 72px; gap: 10px; }
+  .quick-action { width: 72px; min-height: 72px; padding: 6px 2px; gap: 3px; }
+  .quick-action svg { width: 24px; height: 24px; }
+  .quick-size-mark { height: 24px; font-size: 24px; }
+  .page-size-controls { right: calc(100% + 8px); max-width: calc(100vw - 96px); }
+}
+@media (max-height: 420px) {
+  .quick-actions { gap: 6px; }
+  .quick-action { min-height: 56px; border-radius: 16px; }
+  .quick-action svg, .quick-size-mark { display: none; }
+}
+/* Respond to the space left after magnification, including desktop zoom. */
+@container (max-width: 760px) {
+  #site-content .hero { display: flex; flex-direction: column; min-height: 0; gap: 30px; }
+  #site-content .hero h1 { font-size: 35px; letter-spacing: -1px; }
+  #site-content .hero-bottom { position: static; writing-mode: horizontal-tb; margin-top: 24px; }
+  #site-content .image-frame { height: auto; aspect-ratio: 1.05; }
+  #site-content .hero-image img { max-height: none; }
+  #site-content .shop-card, #site-content .brand-grid { grid-template-columns: 1fr; }
+  #site-content .story, #site-content .gift, #site-content .faq, #site-content .notes { display: block; }
+  #site-content .story { padding: 48px 6%; }
+  #site-content .note, #site-content .gift-copy { margin-top: 28px; }
+  #site-content .section-heading, #site-content .brand-audience, #site-content .intro-strip { display: block; }
+  #site-content .footer-inner { grid-template-columns: 1fr; }
+  #site-content .site-nav { position: relative; min-height: 78px; gap: 8px; }
+  #site-content .menu-toggle, #site-content .toggle { display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  #site-content .logo img, #site-content .brand img { width: 96px; }
+  #site-content .head { position: relative; padding-inline: 12px; gap: 8px; }
+  #site-content .main-menu, #site-content .head nav {
+    display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 9;
+    padding: 14px 6%; background: #fff8ea; border-bottom: 1px solid #d8d9cb;
+    flex-direction: column; align-items: stretch; gap: 8px;
+  }
+  #site-content .main-menu.open, #site-content .head nav.open { display: flex; }
+  #site-content .links { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  #site-content .links a { white-space: normal; font-size: 17px; padding: 10px 4px; }
+  #site-content .order-button, #site-content .nav-cta { width: 100%; min-height: 48px; font-size: 16px; }
+  #site-content .shop-actions .button { flex: 1; justify-content: center; gap: 6px; }
+}
