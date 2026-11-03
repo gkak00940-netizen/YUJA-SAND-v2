@@ -17,7 +17,7 @@
     const controls = document.createElement('section');
     controls.className = 'quick-actions';
     controls.setAttribute('aria-label', '빠른 메뉴');
-    controls.innerHTML = '<button type="button" class="quick-action" data-quick="cart" aria-haspopup="dialog"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M3 5h4l4 16h14l4-12H9M12 14h14M16 9v12M22 9v12"/><circle cx="13" cy="27" r="1.5"/><circle cx="24" cy="27" r="1.5"/></svg><span>장바구니</span></button><button type="button" class="quick-action" data-quick="phone" aria-haspopup="dialog"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m8 3 6 6-4 4c3 5 5 7 10 10l4-4 6 6-3 4c-2 2-6 1-9-1C11 24 6 19 3 12 1 8 2 5 4 4Z"/></svg><span>전화주문</span></button><button type="button" class="quick-action" id="page-size-toggle" data-quick="size" aria-expanded="false" aria-controls="page-size-panel"><span class="quick-size-mark" aria-hidden="true">가<span>+</span></span><span>크게보기</span></button><section class="page-size-controls" id="page-size-panel" aria-label="홈페이지 전체 크기 조절" hidden><button type="button" data-size="down" aria-label="홈페이지 전체 크기 25퍼센트 줄이기" title="화면 작게"><span class="page-size-glyph" aria-hidden="true">가<span>−</span></span></button><button type="button" data-size="reset" aria-label="홈페이지 전체 크기 100퍼센트로 되돌리기" title="눌러서 기본 크기로"><output aria-live="polite" aria-atomic="true"></output><span class="page-size-reset" aria-hidden="true">↺</span></button><button type="button" data-size="up" aria-label="홈페이지 전체 크기 25퍼센트 키우기" title="화면 크게"><span class="page-size-glyph" aria-hidden="true">가<span>+</span></span></button></section>';
+    controls.innerHTML = '<button type="button" class="quick-action" data-quick="cart" aria-haspopup="dialog"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M3 5h4l4 16h14l4-12H9M12 14h14M16 9v12M22 9v12"/><circle cx="13" cy="27" r="1.5"/><circle cx="24" cy="27" r="1.5"/></svg><span>장바구니</span></button><a class="quick-action" href="chatbot.html"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 5h20a3 3 0 0 1 3 3v13a3 3 0 0 1-3 3H14l-8 5v-5a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3Z"/><path d="M9 12h14M9 17h9"/></svg><span>상담하기</span></a><button type="button" class="quick-action" id="page-size-toggle" data-quick="size" aria-expanded="false" aria-controls="page-size-panel"><span class="quick-size-mark" aria-hidden="true">가<span>+</span></span><span>크게보기</span></button><section class="page-size-controls" id="page-size-panel" aria-label="홈페이지 전체 크기 조절" hidden><button type="button" data-size="down" aria-label="홈페이지 전체 크기 25퍼센트 줄이기" title="화면 작게"><span class="page-size-glyph" aria-hidden="true">가<span>−</span></span></button><button type="button" data-size="reset" aria-label="홈페이지 전체 크기 100퍼센트로 되돌리기" title="눌러서 기본 크기로"><output aria-live="polite" aria-atomic="true"></output><span class="page-size-reset" aria-hidden="true">↺</span></button><button type="button" data-size="up" aria-label="홈페이지 전체 크기 25퍼센트 키우기" title="화면 크게"><span class="page-size-glyph" aria-hidden="true">가<span>+</span></span></button></section>';
     document.body.append(controls);
     const down = controls.querySelector('[data-size="down"]');
     const up = controls.querySelector('[data-size="up"]');
@@ -41,11 +41,6 @@
       if (action?.dataset.quick === 'cart') {
         closeSizePanel(false);
         document.dispatchEvent(new CustomEvent('sand:cart-open'));
-        return;
-      }
-      if (action?.dataset.quick === 'phone') {
-        closeSizePanel(false);
-        document.dispatchEvent(new CustomEvent('sand:phone-open'));
         return;
       }
       if (action?.dataset.quick === 'size') {
