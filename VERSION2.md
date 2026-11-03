@@ -1,5 +1,7 @@
 # YUJA-SAND 버전2
 
+현재 버전은 3.0.0입니다. 최신 안내는 [VERSION3.md](VERSION3.md)를 확인하세요. 아래 내용은 버전2 기반 작업 기록입니다.
+
 저장일: 2026-11-03
 
 공개 주소: https://gkak00940-netizen.github.io/YUJA-SAND-v2/

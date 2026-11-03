@@ -2,7 +2,7 @@
 
 전용 주소: https://gkak00940-netizen.github.io/YUJA-SAND-v2/chatbot.html
 
-기존 GitHub Pages 홈페이지의 dist 폴더에 chatbot.html, chatbot.css, chatbot.js를 추가합니다. 홈 화면에 링크를 넣으려면 `chatbot.html`을 ‘상담하기’ 버튼의 주소로 지정합니다. 이 작업은 기존 홈 화면을 변경하지 않습니다.
+GitHub Pages 홈페이지의 dist 폴더에 chatbot.html, chatbot.css, chatbot.js가 포함되어 있습니다. 홈페이지 오른쪽의 전화주문 자리는 ‘상담하기’ 링크로 변경되었으며, 누르면 chatbot.html로 이동합니다.
 
 현재 상담봇은 브라우저 안에서 정해진 질문을 분류해 답하는 자동 안내입니다. AI 서비스, 주문 조회, 결제, 상담 접수 또는 사람에게 메시지 전달 기능은 연결되어 있지 않습니다. 대화를 저장하거나 서버로 보내지 않습니다.
 
