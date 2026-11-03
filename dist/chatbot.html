@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="유자샌드 상품, 주문, 배송, 교환과 환불에 관한 자동 안내입니다.">
+  <title>유자샌드 상담봇</title>
+  <link rel="stylesheet" href="chatbot.css">
+  <script src="chatbot.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="유자샌드 홈으로">
+      <span class="citrus" aria-hidden="true"></span><span>유자샌드</span>
+    </a>
+    <a class="home" href="index.html">홈으로</a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">유자샌드 자동 안내</p>
+      <h1 id="page-title">무엇이 궁금하세요?</h1>
+      <p>아래 질문을 누르거나, 궁금한 내용을 적어 주세요.</p>
+    </section>
+    <section class="chat" aria-label="유자샌드 상담">
+      <div class="chat-heading"><span class="avatar" aria-hidden="true">유</span><div><h2>유자샌드 상담봇</h2><p>쉽고 짧게 안내해 드려요</p></div><button class="reset" id="reset" type="button">새 대화</button></div>
+      <div id="messages" class="messages" role="log" aria-label="대화 내용" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
+      <div class="quick-questions" aria-label="자주 묻는 질문">
+        <button type="button" data-question="상품 안내">상품 안내</button>
+        <button type="button" data-question="주문 방법">주문 방법</button>
+        <button type="button" data-question="배송 안내">배송 안내</button>
+        <button type="button" data-question="교환·환불">교환·환불</button>
+        <button type="button" data-question="가격·재고">가격·재고</button>
+        <button type="button" data-question="상담원 문의">상담원 문의</button>
+      </div>
+      <form id="chat-form" class="composer">
+        <label for="question">궁금한 내용</label>
+        <div class="input-row"><input id="question" name="question" type="text" maxlength="300" autocomplete="off" placeholder="예: 배송은 어떻게 되나요?" required><button type="submit">보내기</button></div>
+        <p>이름·전화번호·주문번호 등 개인정보는 입력하지 마세요.</p>
+      </form>
+      <noscript><p class="notice">자동 안내를 이용하려면 브라우저의 자바스크립트를 켜 주세요.</p></noscript>
+    </section>
+    <p class="notice">정해진 질문에 답하는 자동 안내입니다. 주문 조회·상담 접수는 되지 않으며, 대화는 새로고침하면 사라집니다.</p>
+    <footer><a href="index.html">유자샌드 홈으로 돌아가기 <span aria-hidden="true">↗</span></a></footer>
+  </main>
+</body>
+</html>
